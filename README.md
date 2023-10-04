@@ -1,10 +1,15 @@
-#Lectura de Multiple Documentos Chatbot con Langchain y Streamlit
+# Lectura de Multiples Documentos Chatbot con Langchain y Streamlit
 
+## Arquitectura de la aplicación
 
 <p align=center>
-<img src="src\arq.png" height = 560 weight=200>
+<img src="src\arq.png" height = 460 weight=400>
 <p>
 
+- Carga de los documentos 
+- Extracción del contenido 
+- Se parte el contenido y se divide en segmentos
+- Creación de embaddings para cada segmento 
 
 
 

@@ -10,14 +10,8 @@
 - Extracción del contenido 
 - Se parte el contenido y se divide en segmentos
 - Creación de embaddings para cada segmento 
-
-
-
-
-
-
-
-
+- Construcción de la Semántica para generar la Base de Conocimiento  
+- Cuando el usuario genere una pregunta se crean embeddings y una búsqueda semántica para encontrar similitudes en la Base de Conocimiento, luego de obtener las respuestas se clasificarán los resultados entrará al LLM y luego se dará la respuesta al usuario.
 
 ## Ejecución Local 💻
 

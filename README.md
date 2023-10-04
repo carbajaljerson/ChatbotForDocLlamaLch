@@ -1,7 +1,9 @@
 #Lectura de Multiple Documentos Chatbot con Langchain y Streamlit
 
 
-
+<p align=center>
+<img src="src\arq.png" height = 560 weight=660>
+<p>
 
 
 

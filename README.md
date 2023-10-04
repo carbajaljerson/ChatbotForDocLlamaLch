@@ -37,6 +37,9 @@ Instalar las dependencias en el ambiente virtual :
 
 `pip install -r requirements.txt`
 
+Modelo cuantizado:
+
+`wget https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/resolve/main/llama-2-7b-chat.ggmlv3.q4_0.bin`
 
 Lanzar el servicio localmente :
 

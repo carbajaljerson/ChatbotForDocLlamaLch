@@ -16,14 +16,14 @@
 
 Siga estos pasos para configurar y ejecutar el proyecto localmente:
 
-### Prerequisites
+### Pre-requisitos
 - Python 3.8 o superior
 - Git
 
 ### Instalación
 Clonar el repositorio :
 
-`git clone `
+`git clone https://github.com/carbajaljerson/ChatbotForDocLlamaLch.git`
 
 
 Crear el entorno virtual :

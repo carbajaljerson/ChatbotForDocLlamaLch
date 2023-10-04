@@ -2,7 +2,7 @@
 
 
 <p align=center>
-<img src="src\arq.png" height = 560 weight=500>
+<img src="src\arq.png" height = 560 weight=200>
 <p>
 
 

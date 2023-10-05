@@ -8,7 +8,7 @@
 ## Arquitectura de la aplicación
 
 <p align=center>
-<img src="src\arq.png" height = 460 weight=200>
+<img src="src\arq.png" height = 360 weight=200>
 <p>
 
 - Carga de los documentos 

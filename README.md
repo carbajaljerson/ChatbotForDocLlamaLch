@@ -1,5 +1,10 @@
 # Lectura de Multiples Documentos Chatbot con Langchain y Streamlit
 
+<p align=center>
+<img src="src\banner.png" height = 450 weight=800>
+<p>
+
+
 ## Arquitectura de la aplicación
 
 <p align=center>

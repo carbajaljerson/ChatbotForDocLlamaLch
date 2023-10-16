@@ -77,10 +77,11 @@ def create_conversational_chain(vector_store):
 
     
     # Create llm
-    llm = CTransformers(model="llama-2-7b-chat.ggmlv3.q4_0.bin",
-                        streaming=True, 
-                        callbacks=[StreamingStdOutCallbackHandler()],
-                        model_type="llama", config={'max_new_tokens': 500, 'temperature': 0.00001})
+    llm = Replicate(
+        streaming = True,
+        model = "replicate/llama-2-70b-chat:58d078176e02c219e11eb4da5a02a7830a283b14cf8f94537af893ccff5ee781", 
+        callbacks=[StreamingStdOutCallbackHandler()],
+        input = {"temperature": 0.01, "max_length" :500,"top_p":1})
     
     #si la temperartura tiende a cero entonces es racional sino temperatura mas alta pensamiento divergente 
     

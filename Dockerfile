@@ -5,18 +5,16 @@ FROM python:3.11.4
 WORKDIR /app
 
 # Copy the requirements.txt file first to leverage Docker cache
-COPY requirements.txt ./requirements.txt
-
+COPY requirements.txt .
 
 # Install required Python packages
-RUN python -m  pip install -r requirements.txt 
+RUN pip install -r requirements.txt --default-timeout=100 future
 
-#copy the rest of the application files to the container's working directory
-COPY . . 
+# Copy the rest of the application files to the container's working directory
+COPY . .
 
+# Expose the port that Streamlit will run on
+EXPOSE 8501
 
-# Expose the port that Django will run on
-EXPOSE 8000
-
-# Command to run your Django application
-CMD streamlit run app.py
+# Command to run your Streamlit application
+CMD ["streamlit", "run", "chatbot_app.py"]

@@ -18,8 +18,11 @@ import os
 from dotenv import load_dotenv
 import tempfile
 
+#Set the REPLICATE_API_TOKEN environment variable
+os.environ["REPLICATE_API_TOKEN"] = "r8_bnj7RZGhbYp1ECDF5fwCFjDZwy4MDJg2LoAjg"
 
-load_dotenv()
+
+
 
 #Inicializando la sesion del chatbot 
 def initialize_session_state():

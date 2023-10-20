@@ -4,6 +4,8 @@ FROM python:3.11.4
 # Set the working directory inside the container
 WORKDIR /app
 
+ENV REPLICATE_API_TOKEN = 'r8_bnj7RZGhbYp1ECDF5fwCFjDZwy4MDJg2LoAjg'
+
 # Copy the requirements.txt file first to leverage Docker cache
 COPY requirements.txt .
 

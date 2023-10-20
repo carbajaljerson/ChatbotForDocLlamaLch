@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://testdockerjcr.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_e014778d400c4b61953da7e614774fd3 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_90aa303138214609a3f471b348416592 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_e13ad7bb62b146fe81d961fa3e7aa61c }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_7336030d957f48a7b5d0eb7298d28104 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: testdockerjcr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_e014778d400c4b61953da7e614774fd3 }}/mltest:${{ github.sha }}
+        tags: testdockerjcr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_e13ad7bb62b146fe81d961fa3e7aa61c }}/mltest:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'chatbotllama'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_87fb4470e5b94ac8965bb25cf7fdc662 }}
-        images: 'testdockerjcr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_e014778d400c4b61953da7e614774fd3 }}/mltest:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_28341b4dd7f84e6b8f1cb6926ea1f739 }}
+        images: 'testdockerjcr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_e13ad7bb62b146fe81d961fa3e7aa61c }}/mltest:${{ github.sha }}'

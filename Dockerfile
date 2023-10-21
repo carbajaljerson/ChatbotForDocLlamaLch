@@ -22,7 +22,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt --default-timeout=100 future
 
 # Expose the port that Streamlit will run on
-EXPOSE 8000
+EXPOSE 8501
 
 # Command to run your Streamlit application
 CMD ["streamlit", "run", "app.py"]

@@ -2,18 +2,24 @@
 FROM python:3.11.4
 
 # Set the working directory inside the container
-WORKDIR /app
+ENV DockerHOME=/home/app/webapp  
 
-ENV REPLICATE_API_TOKEN = 'r8_bnj7RZGhbYp1ECDF5fwCFjDZwy4MDJg2LoAjg'
+# set work directory  
+RUN mkdir -p $DockerHOME  
 
-# Copy the requirements.txt file first to leverage Docker cache
-COPY requirements.txt .
+# where your code lives  
+WORKDIR $DockerHOME  
+
+ENV ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
+
+# Copy the rest of the application files to the container's working directory
+COPY . $DockerHOME
+
+# install dependencies  
+RUN pip install --upgrade pip 
 
 # Install required Python packages
 RUN pip install -r requirements.txt --default-timeout=100 future
-
-# Copy the rest of the application files to the container's working directory
-COPY . .
 
 # Expose the port that Streamlit will run on
 EXPOSE 8501

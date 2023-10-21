@@ -45,6 +45,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
+        node-version: 16
         app-name: 'llama2chatbot'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_12d76aaa8e7d4fc2a0d44c4e64d7faa9 }}
